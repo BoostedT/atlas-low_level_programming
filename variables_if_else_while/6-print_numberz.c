@@ -6,6 +6,11 @@
  */
 int main(void)
 {
-putchar("0123456789\n");
+int a = '0';
+while (a <= 9)
+putchar(a);
+a++;
+}
+putchar('\n');
 return (0);
 }
