@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <time.h>
 /**
- * main - prints a to z in lower case then in upper case.
- *
- * Return: 0
+ * main - program that prints the alphabet in lowercase, followed by a new line.
+ * 
+ * Return: Always 0.
  */
-int main(void)
+int main(void)  
 {
-char c = 'a';
-char d = 'A';
+char c; = 'a';
+char d; = 'A';
 while (c <= 'z')
 {
 putchar(c);
@@ -19,6 +19,6 @@ while (d <= 'Z')
 putchar(d);
 d++;
 }
-putchar(\n);
+putchar('\n');
 return (0);
 }
