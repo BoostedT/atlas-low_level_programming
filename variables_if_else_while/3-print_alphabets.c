@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
+char c = 'a';
+char d = 'A';
+while (c <= 'z')
 {
 putchar(c);
+c++;
 }
-if (c >= 'a' && c <= 'z')
+while (d <= 'Z')
 {
-putchar(c);
+putchar(d);
+d++;
 }
-else if (c >= 'A' && c <= 'Z')
-{
-putchar('\n');
-}
+putchar(\n);
 return (0);
 }
