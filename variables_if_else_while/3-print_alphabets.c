@@ -18,8 +18,7 @@ putchar(c);
 }
 else if (c >= 'A' && c <= 'Z')
 {
-putchar(c);
-}
 putchar('\n');
+}
 return (0);
 }
