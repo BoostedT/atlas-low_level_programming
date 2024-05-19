@@ -1,2 +1,1 @@
-u
-
+int _putchar(char c);
