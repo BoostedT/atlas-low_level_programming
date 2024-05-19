@@ -11,9 +11,9 @@ for (int i = '0'; i <= '9'; i++)
 {
 putchar(i);
 }
-for (int i = 'a'; i <= 'f' i++)
+for (int l = 'a'; i <= 'f' i++)
 {
-putchar(i);
+putchar(l);
 }
 putchar('\n');
 return (0);
