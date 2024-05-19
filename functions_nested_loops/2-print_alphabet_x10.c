@@ -11,7 +11,7 @@ char t = 'a';
 while (i < 10)
 {
 t = 'a';
-while ( t <= 'z')
+while (t <= 'z)'
 {
 _putchar(t);
 t++;
