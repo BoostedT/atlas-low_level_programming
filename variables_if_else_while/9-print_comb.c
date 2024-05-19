@@ -10,7 +10,7 @@ char c = '0';
 while (c <= '9')
 {
 putchar(c);
-if (c <= '9')
+if (c != '9')
 {
 putchar(',');
 }
