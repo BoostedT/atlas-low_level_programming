@@ -6,14 +6,17 @@
  */
 int main(void)
 {
-int i;
-for (int i = '0'; i <= '9'; i++)
+char c = 'a';
+int  d = 0;
+while (d < 10)
 {
-putchar(i);
+putchar(d + '0');
+d++;
 }
-for (int l = 'a'; i <= 'f' l++)
+while (c <= 'f')
 {
-putchar(l);
+putchar(c);
+c++;
 }
 putchar('\n');
 return (0);
