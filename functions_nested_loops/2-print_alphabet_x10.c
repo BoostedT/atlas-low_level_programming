@@ -12,7 +12,7 @@ while (i < 10)
 t = 'a';
 while ( t <= 'z')
 {
-_putchar (t);
+_putchar(t);
 t++;
 }
 _putchar('\n');
