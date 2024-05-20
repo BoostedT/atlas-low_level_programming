@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _abs - prints the sign of absolute value of a number
  * @n: The number to be checked
