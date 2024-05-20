@@ -1,8 +1,8 @@
-nclude <stdio.h>
+#include <stdio.h>
 /**
- *  * main - prints all possible combinations of three digits
- *   * Return: 0
- *    */
+ * main - prints all possible combinations of three digits
+ * Return: 0
+ */
 int main(void)
 {
 int i, j, k;
