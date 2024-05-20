@@ -6,19 +6,28 @@
  */
 void print_to_98(int n);
 {
-if (n < 98)
+int t, w;
+
+if (n <= 98)
 {
-for (int i = n; i < 98; i++)
+for (t = n; t <= 98; t++)
 {
-printf("%d, ", i);
+if (t == 98)
+{
+printf("%d\n", t);
+else if (t != 98)
+printf("%d, ", t);
 }
 }
-else if (n > 98)
+else if (n >= 98)
 {
-for (int i = n; i > 98; i--)
+for (w = n; w >= 98; w--)
 {
-printf("%d, ", i);
+if (w == 98)
+printf("%d\n", w);
+else if (w != 98)
+printf("%d, ", w);
 }
 }
-printf("98\n");
+}
 }
