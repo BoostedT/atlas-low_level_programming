@@ -7,19 +7,13 @@ void times_table(void)
 {
 int i, j, result;
 
-for (i = 0; i < 10; i++)
-{
-_putchar('0');
-_putchar(',');
-_putchar(' ');
-for (j = 1; j < 10; j++)
+for (i = 0; i < 9; i++)
 {
 result = i * j;
-if (result < 10)
+if (j != 10)
 {
+_putchar(',');
 _putchar(' ');
-_putchar(' ');
-_putchar(result+0);
 }
 else
 {
