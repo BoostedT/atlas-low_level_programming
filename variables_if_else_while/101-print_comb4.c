@@ -21,7 +21,7 @@ putchar(w);
 if (t != 55 || b != 56)
 {
 putchar(',');
-putchar(' ')
+putchar(' ');
 }
 }
 }
