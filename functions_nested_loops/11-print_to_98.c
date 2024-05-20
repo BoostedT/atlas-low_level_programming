@@ -4,7 +4,7 @@
  * @n: integer to start counting from
  * Return: void
  */
-void print_to_98(int n);
+void print_to_98(int n)
 {
 int t, w;
 
