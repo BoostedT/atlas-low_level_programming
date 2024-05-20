@@ -4,7 +4,7 @@
  * @n: prints the sign of a number
  * Return: 1 if n is greater than zero, 0 if n is zero, -1 if n is less than 0
  */
-int print_sign(int n);
+int print_sign(int n)
 {
 while (n > 0)
 {
