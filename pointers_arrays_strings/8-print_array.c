@@ -3,8 +3,8 @@
 
 /**
 * print_array - print an array of integers
-* @array: array to print
-* @size: size of array
+* @a: array to print
+* @n: size of array
 * Return: void
 */
 void print_array(int *a, int n)
