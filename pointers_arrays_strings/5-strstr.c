@@ -5,27 +5,42 @@
  * @needle: string containing the characters to match
  * Return: pointer to the beginning of the located substring, or NULL if the substring is not found
  */
+#include "main.h"
+
+/**
+ * _strstr - locates a substring
+ * @haystack: string to be scanned
+ * @needle: string containing the characters to match
+ * Return: pointer to the beginning of the located substring, or NULL if the substring is not found
+ */
 char *_strstr(char *haystack, char *needle)
 {
-int i = 0, j = 0, k = 0;
-while (haystack[i] != '\0')
+int count = 0, a = 0, b = 0;
+while (needle[count] != '\0')
 {
-if (haystack[i] == needle[j])
+count++;
+}
+if (count == 0)
 {
-k = i;
-while (haystack[i] == needle[j] && haystack[i] != '\0' && needle[j] != '\0')
+return haystack; // Return haystack if needle is empty
+}
+while (haystack[b] != '\0')
 {
-i++;
-j++;
-}
-if (needle[j] == '\0')
+if (haystack[b] == needle[0])
 {
-return (haystack + k);
+for (a = 0; a < count; a++)
+{
+if (haystack[b + a] != needle[a])
+{
+    break;
 }
-i = k;
-j = 0;
 }
-i++;
+if (a == count)
+{
+return (haystack + b);
 }
-return (0);
+}
+b++;
+}
+return NULL; // Return NULL if substring is not found
 }
