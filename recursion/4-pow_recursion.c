@@ -6,7 +6,7 @@
  * Return: on Success 1.
  * on error -1.
  */
-int pow_recursion(int x, int y)
+int _pow_recursion(int x, int y)
 {
 if (y < 0)
 return (-1);
