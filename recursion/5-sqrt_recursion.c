@@ -18,7 +18,6 @@ int my_sqrt_recursion(int a, int b)
 /**
  * _sqrt_recursion - This is my first function
  * @n: This is my variable
- * 
  * Return: This is my result of the function my_sqrt_recursion
  */
 int _sqrt_recursion(int n)
