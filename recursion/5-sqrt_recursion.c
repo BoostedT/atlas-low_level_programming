@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * my_sqrt_recursion - returns the natural square root of a number
- * @n: - Integer
+ * @a: - This is my variable
+ * @b: - This is another variable 
  * Return: on Success 1.
  * on error -1.
  */
