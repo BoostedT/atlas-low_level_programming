@@ -22,5 +22,5 @@ if (n == i)
 return (1);
 if (n % i == 0)
 return (0);
-return (_is_prime(n, i + 1));
+return (is_prime(n, i + 1));
 }
