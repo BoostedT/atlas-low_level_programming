@@ -8,22 +8,20 @@
  */
 int main(int argc, char *argv[])
 {
-if (argc < 1)
+int i, j, add = 0;
+
+for (i = 1; i < argc; i++)
 {
-printf("0\n");
-return (0);
-}
-while (--argc)
+for (j = 0; argv[i][j]; != '\0', j++)
 {
-if (*argv[argc] < '0' || *argv[argc] > '9')
+if (argv[i][j] < '0' || argv[i][j] > '9')
 {
 printf("Error\n");
 return (1);
 }
 }
-while (--argc)
-{
-printf("%d\n", atoi(argv[argc]));
+add += atoi(argv[i]);
 }
+printf("%d\n", add);
 return (0);
 }
