@@ -1,56 +1,56 @@
 #include "main.h"
 
 /**
- * create_file - creates a file and writes text to it
- * @filename: the name of the file to create
- * @text_content: the text to write to the file
+ * main - copies the content of a file to another file
+ * @argc: argument count
+ * @argv: argument vector
  *
- * Return: 1 on success, -1 on failure
+ * Return: 0 on success
  */
-int main(int ac, char **av)
+int cp(int argc, char *argv[])
 {
-int fdFrum, fdToo, wrote, readed;
-char buff[1024];
-if (ac != 3)
+int file_from, file_to, read_from, write_to;
+char buffer[1024];
+if (argc != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-exit(97);
+    dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+    exit(97);
 }
-fdFrum = open(av[1], O_RDONLY);
-if (fdFrum == -1)
+file_from = open(argv[1], O_RDONLY);
+if (file_from == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-exit(98);
+    dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+    exit(98);
 }
-fdToo = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-if (fdToo == -1)
+file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+if (file_to == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-exit(99);
+    dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+    exit(99);
 }
-while ((readed = read(fdFrum, buff, 1024)) > 0)
+while ((read_from = read(file_from, buffer, 1024)) > 0)
 {
-wrote = write(fdToo, buff, readed);
-if (wrote == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-exit(99);
+    write_to = write(file_to, buffer, read_from);
+    if (write_to != read_from)
+    {
+        dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+        exit(99);
+    }
 }
-}
-if (readed == -1)
+if (read_from == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-exit(98);
+    dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+    exit(98);
 }
-if (close(fdFrum) == -1)
+if (close(file_from) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdFrum);
-exit(100);
+    dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
+    exit(100);
 }
-if (close(fdToo) == -1)
+if (close(file_to) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd %d", fdToo);
-exit(100);
+    dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
+    exit(100);
 }
 return (0);
 }
