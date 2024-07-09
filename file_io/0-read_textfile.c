@@ -10,31 +10,30 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fd;
-ssize_t n;
-char *buf;
-if (!filename)
+ssize_t lenr, lenw;
+char *buffer;
+
+if (filename == NULL)
 return (0);
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
-buf = malloc(sizeof(char) * letters);
-if (!buf)
-return (0);
-
-n = read(fd, buf, letters);
-if (n == -1)
+buffer = malloc(sizeof(char) * letters);
+if (buffer == NULL)
 {
-free(buf);
-return (0);
-}
-n = write(STDOUT_FILENO, buf, n);
-if (n == -1)
-{
-free(buf);
-return (0);
-}
-
-free(buf);
 close(fd);
-return (n);
+return (0);
+}
+lenr = read(fd, buffer, letters);
+close(fd);
+if (lenr == -1)
+{
+free(buffer);
+return (0);
+}
+lenw = write(STDOUT_FILENO, buffer, lenr);
+free(buffer);
+if (lenr != lenw)
+return (0);
+return (lenw);
 }
