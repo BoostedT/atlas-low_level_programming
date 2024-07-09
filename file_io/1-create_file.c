@@ -27,5 +27,5 @@ close(o);
 return (-1);
 }
 close(o);
-return (1);
+return (-1);
 }
