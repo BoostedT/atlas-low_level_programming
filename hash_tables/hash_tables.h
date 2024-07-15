@@ -7,7 +7,6 @@
 
 /**
  * struct hash_node_s - Node of a hash table
- * 
  * @key: The key, string
  * @value: The value corresponding to a key
  * @next: A pointer to the next node of the list
@@ -21,7 +20,6 @@ struct hash_node_s *next;
 
 /**
  * struct hash_table_s - Hash table data structure
- * 
  * @size: The size of the array
  * @array: An array of size @size
  */
