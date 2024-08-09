@@ -3,34 +3,31 @@
 /**
  * binary_search - searches for an element in an array using binary search
  * @arr: array to search
- * @l: number of elements in the array
- * @r: element to search for
+ * @n: number of elements in the array
+ * @x: element to search for
  * Return: index of the element if found, -1 otherwise
  */
-int binary_search(int arr[], int l, int r)
-{
-    int m;
-    if (r >= l)
-    {
-        m = l + (r - l) / 2;
-        printf("Searching in array: ");
-        while (l <= r)
-        {
-            printf("%d", arr[l]);
-            if (l < r)
-                printf(", ");
-            l++;
-        }
-        printf("\n");
-        if (arr[m] == x)
-            return m;
-        if (arr[m] > x)
-            return binary_search(arr, l, m - 1);
-        return binary_search(arr, m + 1, r);
-    }
-    return -1;
-}
 int binary_search(int arr[], int n, int x)
 {
-    return binary_search(arr, 0, n - 1);
+int left = 0, right = n - 1, mid, i;
+
+while (left <= right)
+{
+printf("Searching in array: ");
+for (i = left; i <= right; i++)
+{
+if (i == right)
+printf("%d\n", arr[i]);
+else
+printf("%d, ", arr[i]);
+}
+mid = left + (right - left) / 2;
+if (arr[mid] == x)
+return (mid);
+else if (arr[mid] < x)
+left = mid + 1;
+else
+right = mid - 1;
+}
+return (-1);
 }
