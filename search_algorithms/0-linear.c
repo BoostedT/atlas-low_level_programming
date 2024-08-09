@@ -7,14 +7,14 @@
  * @x: element to search for
  * Return: index of the element if found, -1 otherwise
  */
-int linear_search(int arr[], int n, int x) 
+int linear_search(int arr[], int n, int x)
 {
 int i;
-for (i = 0; i < n; i++) 
+for (i = 0; i < n; i++)
 {
 printf("Value checked array[%u] = [%d]\n", i, arr[i]);
 if (x == arr[i])
 return (i);
 }
-return -1;
+return (-1);
 }
