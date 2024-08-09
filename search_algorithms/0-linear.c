@@ -15,7 +15,7 @@ for (i = 0; i < n; i++)
 if (arr[i] == x) 
 {
 printf("Value checked array[%u] = [%d]\n", i, array[i]);
-if (x == array[i])
+if (x == arr[i])
 return (i);
 }
 }
