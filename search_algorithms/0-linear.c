@@ -7,9 +7,12 @@
  * @x: element to search for
  * Return: index of the element if found, -1 otherwise
  */
-int linear_search(int arr[], int n, int x) {
-for (int i = 0; i < n; i++) {
-if (arr[i] == x) {
+int linear_search(int arr[], int n, int x) 
+{
+for (int i = 0; i < n; i++) 
+{
+if (arr[i] == x) 
+{
 return i;
 }
 }
