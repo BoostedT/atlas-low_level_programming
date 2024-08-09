@@ -14,9 +14,10 @@ for (i = 0; i < n; i++)
 {
 if (arr[i] == x) 
 {
-return i;
+printf("Value checked array[%u] = [%d]\n", i, array[i]);
+if (value == array[i])
+return (i);
 }
 }
 return -1;
 }
-
